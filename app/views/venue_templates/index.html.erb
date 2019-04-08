@@ -74,7 +74,11 @@
 
         <!-- Display venue.neighboorhood_id start -->
         <td>
-          <%= venue.neighboorhood.name %>
+          <% if venue.neighboorhood.present? %>
+            <a href="/neighborhoods/<%= venue.neighboorhood.id %>">
+              <%= venue.neighboorhood.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display venue.neighboorhood_id end -->
 

@@ -52,7 +52,11 @@
       </dt>
       <!-- Display neighboorhood_id start -->
       <dd>
-        <%= @venue.neighboorhood_id %>
+        <% if @venue.neighboorhood.present? %>
+          <a href="/neighborhoods/<%= @venue.neighboorhood_id %>">
+            <%= @venue.neighboorhood.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display neighboorhood_id end -->
 
