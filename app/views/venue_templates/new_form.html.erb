@@ -40,7 +40,7 @@
     </label>
 
     <!-- Input for neighboorhood_id start -->
-    <input type="text" id="neighboorhood_id" name="neighboorhood_id" class="form-control">
+    <%= select_tag(:neighboorhood_id, options_from_collection_for_select(Neighborhood.all, :id, :name, @venue.neighboorhood_id), :class => "form-control") %>
     <!-- Input for neighboorhood_id end -->
   </div>
   <!-- Label and input for neighboorhood_id end -->
